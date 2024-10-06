@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 mongoose
-  .connect(`mongodb://localhost:27017/aurvedic_drugs`)
+  .connect(`mongodb+srv://parthtpujara:CvMKMEPcoUnFuH1U@ayurvdicknowledge.vee5a.mongodb.net/`)
   .then(() => {
     console.log("Database Conntected Successfully..");
   })

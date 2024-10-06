@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const drugDetailsSchemda = Schema({
+const drugDetailsSchema = Schema({
     drug_name: {
         type: String,
     },
@@ -61,6 +61,6 @@ const drugDetailsSchemda = Schema({
 
 })
 
-const DrugDetailsModel = mongoose.model('drug_detail', drugDetailsSchemda);
+const DrugDetailsModel = mongoose.model('Drug Data', drugDetailsSchema);
 
 export default DrugDetailsModel ;
