@@ -83,14 +83,14 @@ export const getDetails = async(req,res) =>{
 export const updateDetails = async(req,res) =>{
     try {
         let { id, drug_name, Description, link, Synonymns, Botanical_name, Classification, Habitat, Habit, Morphology, Useful_part, Phytoconstituents, Rasapanchaka, Karma, Agrya_karma, Therapeutic_indication, Amayika_Prayoga, Dose, Yoga_formulation, Shlok } = await req.body;
-        Synonymns = await Synonymns.split("\n");
-        Classification = await Classification.split("\n");
-        Morphology = await Morphology.split("\n");
-        Rasapanchaka = await Rasapanchaka.split("\n");
-        Amayika_Prayoga = await Amayika_Prayoga.split("\n");
-        Dose = await Dose.split("\n");
-        Yoga_formulation = await Yoga_formulation.split("\n");
-        Shlok = await Shlok.split("\n");
+        Synonymns = await Synonymns?.split("\n");
+        Classification = await Classification?.split("\n");
+        Morphology = await Morphology?.split("\n");
+        Rasapanchaka = await Rasapanchaka?.split("\n");
+        Amayika_Prayoga = await Amayika_Prayoga?.split("\n");
+        Dose = await Dose?.split("\n");
+        Yoga_formulation = await Yoga_formulation?.split("\n");
+        Shlok = await Shlok?.split("\n");
         const result = await DrugDetailsModel.findOneAndUpdate({_id : id},{ drug_name: drug_name,
             Description: Description,
             link: link,
